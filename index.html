@@ -47,10 +47,10 @@
   header{position:sticky;top:0;z-index:100;background:rgba(250,246,240,.85);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
   header.scrolled{border-color:var(--line);box-shadow:0 4px 24px rgba(35,32,28,.05)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand{display:flex;align-items:center;gap:11px;font-family:'Poppins';font-weight:600;font-size:1.18rem}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Inter',sans-serif;font-weight:600;font-size:1.05rem}
   .brand-logo{height:52px;width:auto;display:block}
-  .brand-mark{height:34px;width:auto;display:block}
-  .brand-name{font-family:'Poppins';font-weight:600;font-size:1.18rem;color:var(--ink)}
+  .brand-mark{height:34px;width:auto;display:block;flex:none}
+  .brand-name{font-family:'Inter',sans-serif;font-weight:600;font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);white-space:nowrap;line-height:1}
   .houses{display:flex;gap:3px}
   .houses span{width:15px;height:18px;position:relative;display:block}
   .houses span::before{content:"";position:absolute;bottom:0;width:15px;height:10px;background:currentColor}
@@ -176,6 +176,10 @@
   .foot-col .lbl{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre);font-weight:600;margin-bottom:16px}
   .foot-col a,.foot-col p{display:block;color:rgba(250,246,240,.78);font-size:.95rem;margin-bottom:9px;transition:color .2s}
   .foot-col a:hover{color:#fff}
+  .social-fb{display:inline-flex!important;align-items:center;gap:9px;margin-top:6px;color:rgba(250,246,240,.78);font-size:.95rem}
+  .social-fb svg{flex:none;transition:transform .2s var(--ease)}
+  .social-fb:hover{color:#fff}
+  .social-fb:hover svg{transform:scale(1.12)}
   .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:.85rem;color:rgba(250,246,240,.5)}
 
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
@@ -198,11 +202,19 @@
     .foot-grid{grid-template-columns:1fr;gap:28px}
     .foot-grid p{max-width:none}
     .brand-logo{max-width:100%}
+    .brand{gap:8px}
+    .brand-name{font-size:.78rem;letter-spacing:.08em}
+    .brand-mark{height:30px}
     .books{gap:14px}
     .cta-final{padding:48px 26px}
     .proof-bar{gap:30px}
     section.block{padding:70px 0}
     .wrap{padding:0 20px}
+  }
+  @media(max-width:360px){
+    .brand-name{font-size:.7rem;letter-spacing:.05em}
+    .brand{gap:7px}
+    .wrap{padding:0 16px}
   }
 </style>
 <script type="application/ld+json">
@@ -487,6 +499,10 @@
         <a href="mailto:andrews.propertymakeover@gmail.com">andrews.propertymakeover@gmail.com</a>
         <p>18 Kuranda Cres, Kuranda QLD 4881</p>
         <p>Serving Cairns &amp; Far North QLD</p>
+        <a href="https://www.facebook.com/MikeAndrewsPainting" target="_blank" rel="noopener" class="social-fb" aria-label="Follow Property Makeover on Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          <span>Follow us on Facebook</span>
+        </a>
       </div>
     </div>
     <div class="foot-bottom">
